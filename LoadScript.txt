@@ -1,0 +1,289 @@
+﻿///$tab Main
+SET ThousandSep=',';
+SET DecimalSep='.';
+SET MoneyThousandSep=',';
+SET MoneyDecimalSep='.';
+SET MoneyFormat='$#,##0.00;($#,##0.00)';
+SET TimeFormat='h:mm:ss TT';
+SET DateFormat='M/D/YYYY';
+SET TimestampFormat='M/D/YYYY h:mm:ss[.fff] TT';
+SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec';
+SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun';
+
+OLEDB CONNECT32 TO [Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=C:\Users\Andy\SkyDrive\QlikView\Apps\Betsys Bikes\Data Files\Certification.mdb;Mode=Share Deny None;Extended Properties="";Jet OLEDB:System database="";Jet OLEDB:Registry Path="";Jet OLEDB:Database Password="";Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password="";Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False];
+///$tab Sales Orders
+[Sales Order Details]:
+LOAD CarrierTrackingNumber,
+    DueDate,
+    OrderQty,
+    ProductID,
+    SalesOrderDetailID,
+    SalesOrderID,
+    ShipDate,
+    SpecialOfferID,
+    UnitPrice,
+    UnitPriceDiscount;
+SQL SELECT *
+FROM SalesOrderDetail;
+
+[Sales Order Headers]:
+LOAD AccountNumber AS [Sales Order Account Number],
+    BillToAddressID,
+    CustomerID,
+    Freight,
+    LocalCurrency,
+    OrderDate,
+    PurchaseOrderNumber,
+    RevisionNumber,
+    SalesOrderID,
+    SalesOrderNumber,
+    ShipMethodID,
+    ShipToAddressID,
+    Status AS [Sales Order Status],
+    TaxAmt,
+	IF(OnlineOrderFlag<>0, 'Online', TerritoryID) AS TerritoryID;
+SQL SELECT *
+FROM SalesOrderHeader;
+
+///$tab Territories
+[Sales Territory History]:
+LOAD BusinessEntityID AS [Employee ID],
+    IF(IsNull(EndDate), Date('06/30/2009'), Date(EndDate)) AS [Territory End Date],
+    StartDate AS [Territory Start Date],
+    TerritoryID;
+SQL SELECT *
+FROM SalesTerritoryHistory;
+
+[Sales Territories]:
+LOAD CountryRegionCode,
+    `Group`,
+    Name AS [Sales Territory Name],
+    TerritoryID;
+SQL SELECT *
+FROM SalesTerritory;
+
+///$tab Employees
+[Employees]:
+LOAD BaseRate,
+    BirthDate,
+    CurrentFlag,
+    DepartmentName,
+    EmailAddress,
+    EmergencyContactName,
+    EmergencyContactPhone,
+    EmployeeBusinessEntityID AS [Employee ID],
+    EndDate AS [Employee End Date],
+    FirstName AS [Employee First Name],
+    Gender,
+    HireDate,
+    LastName AS [Employee Last Name],
+    MaritalStatus,
+    MiddleName AS [Employee Middle Name],
+    ParentEmployeeBusinessEntityID,
+    PayFrequency,
+    Phone,
+    SalariedFlag,
+    IF (EmployeeBusinessEntityID>273, '1', '0') AS SalesPersonFlag,
+    SalesTerritoryKey,
+    SickLeaveHours,
+    StartDate AS [Employee Start Date],
+    Status AS [Employee Status],
+    Title AS [Employee Title],
+    VacationHours;
+SQL SELECT *
+FROM Employee;
+
+
+///$tab Customers
+[Customers]:
+LOAD AccountNumber AS [Customer Account Number],
+    CustomerID,
+    PersonID,
+    StoreID,
+    TerritoryID AS [Customer Territory ID];
+SQL SELECT *
+FROM Customer;
+
+[Persons]:
+LOAD BusinessEntityID AS [PersonID],
+    EmailPromotion,
+    FirstName AS [Person First Name],
+    LastName AS [Person Last Name],
+    MiddleName AS [Person Middle Name],
+    NameStyle,
+    PersonType,
+    Suffix,
+    Title AS [Person Title];
+SQL SELECT *
+FROM Person;
+
+[Stores]:
+LOAD //SalesPersonID,
+    StoreID,
+    StoreName;
+SQL SELECT *
+FROM Store;
+
+///$tab Addresses
+QUALIFY *;
+UNQUALIFY ShipToAddressID, BillToAddressID;
+
+[Shipping Addresses]:
+LEFT KEEP ([Sales Order Details])
+LOAD AddressID AS [ShipToAddressID],
+    AddressLine1,
+    AddressLine2,
+    City,
+    CountryRegionCode,
+    CountryRegionName,
+    IsOnlyStateProvinceFlag,
+    PostalCode,
+    StateProvinceCode,
+    StateProvinceName,
+    TerritoryID;
+SQL SELECT *
+FROM Address;
+
+[Billing Addresses]:
+LEFT KEEP ([Sales Order Details])
+LOAD AddressID AS [BillToAddressID],
+    AddressLine1,
+    AddressLine2,
+    City,
+    CountryRegionCode,
+    CountryRegionName,
+    IsOnlyStateProvinceFlag,
+    PostalCode,
+    StateProvinceCode,
+    StateProvinceName,
+    TerritoryID;
+SQL SELECT *
+FROM Address;
+
+UNQUALIFY *;
+
+///$tab Products
+[Products]:
+LEFT KEEP ([Sales Order Details])
+LOAD Class,
+    Color,
+    DaysToManufacture,
+    DiscontinuedDate,
+    FinishedGoodsFlag,
+    ListPrice,
+    MakeFlag,
+    Name AS [Product Name],
+    ProductID,
+    ProductLine,
+    ProductModelID,
+    ProductNumber,
+    ProductSubcategoryID,
+    ReorderPoint,
+    SafetyStockLevel,
+    SellEndDate,
+    SellStartDate,
+    Size,
+    SizeUnitMeasureCode,
+    StandardCost,
+    Style,
+    Weight,
+    WeightUnitMeasureCode;
+SQL SELECT *
+FROM Product;
+
+
+[Product Models]:
+LOAD Name AS [Product Model Name],
+    ProductModelID;
+SQL SELECT *
+FROM ProductModel;
+
+
+[Product Categories]:
+LOAD Name AS [Product Category Name],
+    ProductCategoryID;
+SQL SELECT *
+FROM ProductCategory;
+
+
+[Product Subcategories]:
+LOAD Name AS [Product Subcategory Name],
+    ProductCategoryID,
+    ProductSubcategoryID;
+SQL SELECT *
+FROM ProductSubcategory;
+
+
+
+///$tab Vendors
+[Product Vendors]:
+LOAD AverageLeadTime,
+    BusinessEntityID AS [Vendor ID],
+    LastReceiptCost,
+    LastReceiptDate,
+    MaxOrderQty,
+    MinOrderQty,
+    OnOrderQty,
+    ProductID,
+    StandardPrice,
+    UnitMeasureCode;
+SQL SELECT *
+FROM ProductVendor;
+
+[Vendors]:
+LOAD AccountNumber,
+    ActiveFlag,
+    BusinessEntityID AS [Vendor ID],
+    CreditRating,
+    Name,
+    PreferredVendorStatus;
+SQL SELECT *
+FROM Vendor
+WHERE PreferredVendorStatus <> 0;
+
+
+
+///$tab Certifications
+///$tab Calendar
+MinMax:
+LOAD
+	Min(OrderDate) as MinDate,
+	Max(OrderDate) as MaxDate
+Resident [Sales Order Headers];
+
+LET vMinDate = Num(Peek('MinDate', 0, 'MinMax'));
+LET vMaxDate = Num(Peek('MaxDate', 0, 'MinMax'));
+
+DROP Table MinMax;
+
+// ********** Temporary Calendar **********
+
+TempCal:
+LOAD
+	date($(vMinDate) + rowno() - 1) AS TempDate
+AutoGenerate
+	$(vMaxDate) - $(vMinDate) + 1;
+	
+// ********** Master Calendar **********
+[Master Calendar]:
+LOAD
+	TempDate AS Date,
+	Month(TempDate) AS Month,
+	Year(TempDate) AS Year,
+	Month(AddMonths(TempDate, 6)) AS [Fiscal Month],
+	MonthName(AddMonths(TempDate, 6)) AS [Fiscal Month Year],
+	Year(AddMonths(TempDate, 6)) AS [Fiscal Year]
+Resident TempCal
+Order By TempDate asc;
+
+DROP Table TempCal;
+///$tab Exchange Rates
+LOAD * INLINE [
+    Currency, Currency Weight
+    AUD, 1.0908
+    CAD, 1.0187
+    EUR, .7399
+    GBP, .6650
+    USD, 1
+];
+
