@@ -57,10 +57,11 @@ FROM SalesTerritoryHistory;
 [Sales Territories]:
 LOAD CountryRegionCode,
     `Group`,
-    Name AS [Sales Territory Name],
+    Name AS [Territory Name],
     TerritoryID;
 SQL SELECT *
 FROM SalesTerritory;
+
 
 ///$tab Employees
 [Employees]:
@@ -79,6 +80,7 @@ LOAD BaseRate,
     LastName AS [Employee Last Name],
     MaritalStatus,
     MiddleName AS [Employee Middle Name],
+    LastName & ', ' & FirstName & ' ' & MiddleName & '.' AS [Employee Full Name],
     ParentEmployeeBusinessEntityID,
     PayFrequency,
     Phone,
@@ -93,9 +95,19 @@ LOAD BaseRate,
 SQL SELECT *
 FROM Employee;
 
+[Tree View]:
+Hierarchy([Tree Employee ID], [Tree Parent ID], [Employee Full Name], [Tree Parent Name], [Employee Full Name], [Hierarchy Employee], '|', [Hierarchy Depth]) LOAD
+[Employee ID] AS [Tree Employee ID], 
+ParentEmployeeBusinessEntityID AS [Tree Parent ID],
+[Employee Full Name]
+Resident Employees;
+
+
+
 
 ///$tab Customers
 [Customers]:
+LEFT KEEP ([Sales Order Headers])
 LOAD AccountNumber AS [Customer Account Number],
     CustomerID,
     PersonID,
@@ -129,7 +141,7 @@ QUALIFY *;
 UNQUALIFY ShipToAddressID, BillToAddressID;
 
 [Shipping Addresses]:
-LEFT KEEP ([Sales Order Details])
+LEFT KEEP ([Sales Order Headers])
 LOAD AddressID AS [ShipToAddressID],
     AddressLine1,
     AddressLine2,
@@ -145,7 +157,7 @@ SQL SELECT *
 FROM Address;
 
 [Billing Addresses]:
-LEFT KEEP ([Sales Order Details])
+LEFT KEEP ([Sales Order Headers])
 LOAD AddressID AS [BillToAddressID],
     AddressLine1,
     AddressLine2,
@@ -193,6 +205,7 @@ FROM Product;
 
 
 [Product Models]:
+LEFT KEEP ([Products])
 LOAD Name AS [Product Model Name],
     ProductModelID;
 SQL SELECT *
@@ -267,7 +280,7 @@ AutoGenerate
 // ********** Master Calendar **********
 [Master Calendar]:
 LOAD
-	TempDate AS Date,
+	TempDate AS OrderDate,
 	Month(TempDate) AS Month,
 	Year(TempDate) AS Year,
 	Month(AddMonths(TempDate, 6)) AS [Fiscal Month],
@@ -279,11 +292,19 @@ Order By TempDate asc;
 DROP Table TempCal;
 ///$tab Exchange Rates
 LOAD * INLINE [
-    Currency, Currency Weight
+    LocalCurrency, Currency Weight
     AUD, 1.0908
     CAD, 1.0187
     EUR, .7399
     GBP, .6650
     USD, 1
+];
+
+///$tab Shipping
+[Shipping Methods]:
+LOAD * INLINE [
+    Shipping Method Name, ShipMethodID
+    Ground, 1
+    Cargo Transit, 5
 ];
 
