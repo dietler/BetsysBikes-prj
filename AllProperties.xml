@@ -703,6 +703,258 @@
       <OnChangeActionItems></OnChangeActionItems>
       <Comment></Comment>
     </VariableProperties>
+    <VariableProperties>
+      <Name>vLineItemSale</Name>
+      <UseMRU>false</UseMRU>
+      <MRUCount>0</MRUCount>
+      <NumberPresentation></NumberPresentation>
+      <ConstraintsFlag>0</ConstraintsFlag>
+      <StandardType>0</StandardType>
+      <IconType>0</IconType>
+      <UseSoundOnError>false</UseSoundOnError>
+      <UseMsgOnError>false</UseMsgOnError>
+      <ErrorMessage></ErrorMessage>
+      <InputConstraint></InputConstraint>
+      <DefaultLabelAdjust>2</DefaultLabelAdjust>
+      <DefaultTextValueAdjust>2</DefaultTextValueAdjust>
+      <DefaultNumValueAdjust>2</DefaultNumValueAdjust>
+      <UseScroll>false</UseScroll>
+      <UsePredefListedValues>false</UsePredefListedValues>
+      <PreDefinedList></PreDefinedList>
+      <UsePredefNumberSeries>false</UsePredefNumberSeries>
+      <EnableExpressionEditDlg>true</EnableExpressionEditDlg>
+      <dFrom>0000000000000000</dFrom>
+      <dTo>4024000000000000</dTo>
+      <dStep>3FF0000000000000</dStep>
+      <IncludeInBookmark>false</IncludeInBookmark>
+      <OnInputActionItems></OnInputActionItems>
+      <OnChangeActionItems></OnChangeActionItems>
+      <Comment></Comment>
+    </VariableProperties>
+    <VariableProperties>
+      <Name>vLineItemMargin</Name>
+      <UseMRU>false</UseMRU>
+      <MRUCount>0</MRUCount>
+      <NumberPresentation></NumberPresentation>
+      <ConstraintsFlag>0</ConstraintsFlag>
+      <StandardType>0</StandardType>
+      <IconType>0</IconType>
+      <UseSoundOnError>false</UseSoundOnError>
+      <UseMsgOnError>false</UseMsgOnError>
+      <ErrorMessage></ErrorMessage>
+      <InputConstraint></InputConstraint>
+      <DefaultLabelAdjust>2</DefaultLabelAdjust>
+      <DefaultTextValueAdjust>2</DefaultTextValueAdjust>
+      <DefaultNumValueAdjust>2</DefaultNumValueAdjust>
+      <UseScroll>false</UseScroll>
+      <UsePredefListedValues>false</UsePredefListedValues>
+      <PreDefinedList></PreDefinedList>
+      <UsePredefNumberSeries>false</UsePredefNumberSeries>
+      <EnableExpressionEditDlg>true</EnableExpressionEditDlg>
+      <dFrom>0000000000000000</dFrom>
+      <dTo>4024000000000000</dTo>
+      <dStep>3FF0000000000000</dStep>
+      <IncludeInBookmark>false</IncludeInBookmark>
+      <OnInputActionItems></OnInputActionItems>
+      <OnChangeActionItems></OnChangeActionItems>
+      <Comment></Comment>
+    </VariableProperties>
+    <VariableProperties>
+      <Name>vLineItemCost</Name>
+      <UseMRU>false</UseMRU>
+      <MRUCount>0</MRUCount>
+      <NumberPresentation></NumberPresentation>
+      <ConstraintsFlag>0</ConstraintsFlag>
+      <StandardType>0</StandardType>
+      <IconType>0</IconType>
+      <UseSoundOnError>false</UseSoundOnError>
+      <UseMsgOnError>false</UseMsgOnError>
+      <ErrorMessage></ErrorMessage>
+      <InputConstraint></InputConstraint>
+      <DefaultLabelAdjust>2</DefaultLabelAdjust>
+      <DefaultTextValueAdjust>2</DefaultTextValueAdjust>
+      <DefaultNumValueAdjust>2</DefaultNumValueAdjust>
+      <UseScroll>false</UseScroll>
+      <UsePredefListedValues>false</UsePredefListedValues>
+      <PreDefinedList></PreDefinedList>
+      <UsePredefNumberSeries>false</UsePredefNumberSeries>
+      <EnableExpressionEditDlg>true</EnableExpressionEditDlg>
+      <dFrom>0000000000000000</dFrom>
+      <dTo>4024000000000000</dTo>
+      <dStep>3FF0000000000000</dStep>
+      <IncludeInBookmark>false</IncludeInBookmark>
+      <OnInputActionItems></OnInputActionItems>
+      <OnChangeActionItems></OnChangeActionItems>
+      <Comment></Comment>
+    </VariableProperties>
+    <VariableProperties>
+      <Name>vPercentOfQuota</Name>
+      <UseMRU>false</UseMRU>
+      <MRUCount>0</MRUCount>
+      <NumberPresentation></NumberPresentation>
+      <ConstraintsFlag>0</ConstraintsFlag>
+      <StandardType>0</StandardType>
+      <IconType>0</IconType>
+      <UseSoundOnError>false</UseSoundOnError>
+      <UseMsgOnError>false</UseMsgOnError>
+      <ErrorMessage></ErrorMessage>
+      <InputConstraint></InputConstraint>
+      <DefaultLabelAdjust>2</DefaultLabelAdjust>
+      <DefaultTextValueAdjust>2</DefaultTextValueAdjust>
+      <DefaultNumValueAdjust>2</DefaultNumValueAdjust>
+      <UseScroll>false</UseScroll>
+      <UsePredefListedValues>false</UsePredefListedValues>
+      <PreDefinedList></PreDefinedList>
+      <UsePredefNumberSeries>false</UsePredefNumberSeries>
+      <EnableExpressionEditDlg>true</EnableExpressionEditDlg>
+      <dFrom>0000000000000000</dFrom>
+      <dTo>4024000000000000</dTo>
+      <dStep>3FF0000000000000</dStep>
+      <IncludeInBookmark>false</IncludeInBookmark>
+      <OnInputActionItems></OnInputActionItems>
+      <OnChangeActionItems></OnChangeActionItems>
+      <Comment></Comment>
+    </VariableProperties>
+    <VariableProperties>
+      <Name>vDashboardDate</Name>
+      <UseMRU>false</UseMRU>
+      <MRUCount>0</MRUCount>
+      <NumberPresentation></NumberPresentation>
+      <ConstraintsFlag>0</ConstraintsFlag>
+      <StandardType>0</StandardType>
+      <IconType>0</IconType>
+      <UseSoundOnError>false</UseSoundOnError>
+      <UseMsgOnError>false</UseMsgOnError>
+      <ErrorMessage></ErrorMessage>
+      <InputConstraint></InputConstraint>
+      <DefaultLabelAdjust>2</DefaultLabelAdjust>
+      <DefaultTextValueAdjust>2</DefaultTextValueAdjust>
+      <DefaultNumValueAdjust>2</DefaultNumValueAdjust>
+      <UseScroll>false</UseScroll>
+      <UsePredefListedValues>false</UsePredefListedValues>
+      <PreDefinedList></PreDefinedList>
+      <UsePredefNumberSeries>false</UsePredefNumberSeries>
+      <EnableExpressionEditDlg>true</EnableExpressionEditDlg>
+      <dFrom>0000000000000000</dFrom>
+      <dTo>4024000000000000</dTo>
+      <dStep>3FF0000000000000</dStep>
+      <IncludeInBookmark>false</IncludeInBookmark>
+      <OnInputActionItems></OnInputActionItems>
+      <OnChangeActionItems></OnChangeActionItems>
+      <Comment></Comment>
+    </VariableProperties>
+    <VariableProperties>
+      <Name>vDashboardRange</Name>
+      <UseMRU>false</UseMRU>
+      <MRUCount>0</MRUCount>
+      <NumberPresentation></NumberPresentation>
+      <ConstraintsFlag>0</ConstraintsFlag>
+      <StandardType>0</StandardType>
+      <IconType>0</IconType>
+      <UseSoundOnError>false</UseSoundOnError>
+      <UseMsgOnError>false</UseMsgOnError>
+      <ErrorMessage></ErrorMessage>
+      <InputConstraint></InputConstraint>
+      <DefaultLabelAdjust>2</DefaultLabelAdjust>
+      <DefaultTextValueAdjust>2</DefaultTextValueAdjust>
+      <DefaultNumValueAdjust>2</DefaultNumValueAdjust>
+      <UseScroll>false</UseScroll>
+      <UsePredefListedValues>false</UsePredefListedValues>
+      <PreDefinedList></PreDefinedList>
+      <UsePredefNumberSeries>false</UsePredefNumberSeries>
+      <EnableExpressionEditDlg>true</EnableExpressionEditDlg>
+      <dFrom>0000000000000000</dFrom>
+      <dTo>4024000000000000</dTo>
+      <dStep>3FF0000000000000</dStep>
+      <IncludeInBookmark>false</IncludeInBookmark>
+      <OnInputActionItems></OnInputActionItems>
+      <OnChangeActionItems></OnChangeActionItems>
+      <Comment></Comment>
+    </VariableProperties>
+    <VariableProperties>
+      <Name>vColHighlight</Name>
+      <UseMRU>false</UseMRU>
+      <MRUCount>0</MRUCount>
+      <NumberPresentation></NumberPresentation>
+      <ConstraintsFlag>0</ConstraintsFlag>
+      <StandardType>0</StandardType>
+      <IconType>0</IconType>
+      <UseSoundOnError>false</UseSoundOnError>
+      <UseMsgOnError>false</UseMsgOnError>
+      <ErrorMessage></ErrorMessage>
+      <InputConstraint></InputConstraint>
+      <DefaultLabelAdjust>2</DefaultLabelAdjust>
+      <DefaultTextValueAdjust>2</DefaultTextValueAdjust>
+      <DefaultNumValueAdjust>2</DefaultNumValueAdjust>
+      <UseScroll>false</UseScroll>
+      <UsePredefListedValues>false</UsePredefListedValues>
+      <PreDefinedList></PreDefinedList>
+      <UsePredefNumberSeries>false</UsePredefNumberSeries>
+      <EnableExpressionEditDlg>true</EnableExpressionEditDlg>
+      <dFrom>0000000000000000</dFrom>
+      <dTo>4024000000000000</dTo>
+      <dStep>3FF0000000000000</dStep>
+      <IncludeInBookmark>false</IncludeInBookmark>
+      <OnInputActionItems></OnInputActionItems>
+      <OnChangeActionItems></OnChangeActionItems>
+      <Comment></Comment>
+    </VariableProperties>
+    <VariableProperties>
+      <Name>vColNoHighlight</Name>
+      <UseMRU>false</UseMRU>
+      <MRUCount>0</MRUCount>
+      <NumberPresentation></NumberPresentation>
+      <ConstraintsFlag>0</ConstraintsFlag>
+      <StandardType>0</StandardType>
+      <IconType>0</IconType>
+      <UseSoundOnError>false</UseSoundOnError>
+      <UseMsgOnError>false</UseMsgOnError>
+      <ErrorMessage></ErrorMessage>
+      <InputConstraint></InputConstraint>
+      <DefaultLabelAdjust>2</DefaultLabelAdjust>
+      <DefaultTextValueAdjust>2</DefaultTextValueAdjust>
+      <DefaultNumValueAdjust>2</DefaultNumValueAdjust>
+      <UseScroll>false</UseScroll>
+      <UsePredefListedValues>false</UsePredefListedValues>
+      <PreDefinedList></PreDefinedList>
+      <UsePredefNumberSeries>false</UsePredefNumberSeries>
+      <EnableExpressionEditDlg>true</EnableExpressionEditDlg>
+      <dFrom>0000000000000000</dFrom>
+      <dTo>4024000000000000</dTo>
+      <dStep>3FF0000000000000</dStep>
+      <IncludeInBookmark>false</IncludeInBookmark>
+      <OnInputActionItems></OnInputActionItems>
+      <OnChangeActionItems></OnChangeActionItems>
+      <Comment></Comment>
+    </VariableProperties>
+    <VariableProperties>
+      <Name>vViewMode</Name>
+      <UseMRU>false</UseMRU>
+      <MRUCount>0</MRUCount>
+      <NumberPresentation></NumberPresentation>
+      <ConstraintsFlag>0</ConstraintsFlag>
+      <StandardType>0</StandardType>
+      <IconType>0</IconType>
+      <UseSoundOnError>false</UseSoundOnError>
+      <UseMsgOnError>false</UseMsgOnError>
+      <ErrorMessage></ErrorMessage>
+      <InputConstraint></InputConstraint>
+      <DefaultLabelAdjust>2</DefaultLabelAdjust>
+      <DefaultTextValueAdjust>2</DefaultTextValueAdjust>
+      <DefaultNumValueAdjust>2</DefaultNumValueAdjust>
+      <UseScroll>false</UseScroll>
+      <UsePredefListedValues>false</UsePredefListedValues>
+      <PreDefinedList></PreDefinedList>
+      <UsePredefNumberSeries>false</UsePredefNumberSeries>
+      <EnableExpressionEditDlg>true</EnableExpressionEditDlg>
+      <dFrom>0000000000000000</dFrom>
+      <dTo>4024000000000000</dTo>
+      <dStep>3FF0000000000000</dStep>
+      <IncludeInBookmark>false</IncludeInBookmark>
+      <OnInputActionItems></OnInputActionItems>
+      <OnChangeActionItems></OnChangeActionItems>
+      <Comment></Comment>
+    </VariableProperties>
   </VariableProperties>
   <FieldProperties>
     <FieldProperties>
@@ -1666,7 +1918,7 @@
         <Type>DATE</Type>
         <nDec>0</nDec>
         <UseThou>0</UseThou>
-        <Fmt></Fmt>
+        <Fmt>M/D/YYYY</Fmt>
         <Dec></Dec>
         <Thou></Thou>
       </DefaultNumberPresentation>
@@ -7232,7 +7484,7 @@
     </FieldProperties>
     <FieldProperties>
       <IsAnd>false</IsAnd>
-      <Name>Date</Name>
+      <Name>Day And Month</Name>
       <OneAndOnlyOne>false</OneAndOnlyOne>
       <NumberPresentation>
         <Type>UNKNOWN</Type>
@@ -7243,11 +7495,56 @@
         <Thou></Thou>
       </NumberPresentation>
       <DefaultNumberPresentation>
-        <Type>DATE</Type>
+        <Type>UNKNOWN</Type>
         <nDec>0</nDec>
         <UseThou>0</UseThou>
-        <Fmt>M/D/YYYY</Fmt>
+        <Fmt></Fmt>
         <Dec></Dec>
+        <Thou></Thou>
+      </DefaultNumberPresentation>
+      <NumberPresentationSurvive>true</NumberPresentationSurvive>
+      <ShowAlternatives>false</ShowAlternatives>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>0</SortByNumeric>
+        <SortByAscii>0</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+      </SortCriteria>
+      <DefaultTextAdjust>0</DefaultTextAdjust>
+      <DefaultNumAdjust>2</DefaultNumAdjust>
+      <DefaultMultiLine>0</DefaultMultiLine>
+      <DefaultMultiColumn>false</DefaultMultiColumn>
+      <DefaultOrderByRow>false</DefaultOrderByRow>
+      <DefaultShowBorders>false</DefaultShowBorders>
+      <RangeLoInclusive>true</RangeLoInclusive>
+      <RangeHiInclusive>true</RangeHiInclusive>
+      <FixRangeLen>0000000000000000</FixRangeLen>
+      <OnChangeActionItems></OnChangeActionItems>
+      <OnSelectActionItems></OnSelectActionItems>
+      <OnUnlockActionItems></OnUnlockActionItems>
+      <OnLockActionItems></OnLockActionItems>
+    </FieldProperties>
+    <FieldProperties>
+      <IsAnd>false</IsAnd>
+      <Name>Day In Year</Name>
+      <OneAndOnlyOne>false</OneAndOnlyOne>
+      <NumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </NumberPresentation>
+      <DefaultNumberPresentation>
+        <Type>INTEGER</Type>
+        <nDec>0</nDec>
+        <UseThou>1</UseThou>
+        <Fmt>###0</Fmt>
+        <Dec>.</Dec>
         <Thou></Thou>
       </DefaultNumberPresentation>
       <NumberPresentationSurvive>true</NumberPresentationSurvive>
@@ -7322,6 +7619,51 @@
     </FieldProperties>
     <FieldProperties>
       <IsAnd>false</IsAnd>
+      <Name>Month Year</Name>
+      <OneAndOnlyOne>false</OneAndOnlyOne>
+      <NumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </NumberPresentation>
+      <DefaultNumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </DefaultNumberPresentation>
+      <NumberPresentationSurvive>true</NumberPresentationSurvive>
+      <ShowAlternatives>false</ShowAlternatives>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>0</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+      </SortCriteria>
+      <DefaultTextAdjust>0</DefaultTextAdjust>
+      <DefaultNumAdjust>2</DefaultNumAdjust>
+      <DefaultMultiLine>0</DefaultMultiLine>
+      <DefaultMultiColumn>false</DefaultMultiColumn>
+      <DefaultOrderByRow>false</DefaultOrderByRow>
+      <DefaultShowBorders>false</DefaultShowBorders>
+      <RangeLoInclusive>true</RangeLoInclusive>
+      <RangeHiInclusive>true</RangeHiInclusive>
+      <FixRangeLen>0000000000000000</FixRangeLen>
+      <OnChangeActionItems></OnChangeActionItems>
+      <OnSelectActionItems></OnSelectActionItems>
+      <OnUnlockActionItems></OnUnlockActionItems>
+      <OnLockActionItems></OnLockActionItems>
+    </FieldProperties>
+    <FieldProperties>
+      <IsAnd>false</IsAnd>
       <Name>Year</Name>
       <OneAndOnlyOne>false</OneAndOnlyOne>
       <NumberPresentation>
@@ -7338,6 +7680,96 @@
         <UseThou>0</UseThou>
         <Fmt>###0</Fmt>
         <Dec>.</Dec>
+        <Thou></Thou>
+      </DefaultNumberPresentation>
+      <NumberPresentationSurvive>true</NumberPresentationSurvive>
+      <ShowAlternatives>false</ShowAlternatives>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>0</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+      </SortCriteria>
+      <DefaultTextAdjust>0</DefaultTextAdjust>
+      <DefaultNumAdjust>2</DefaultNumAdjust>
+      <DefaultMultiLine>0</DefaultMultiLine>
+      <DefaultMultiColumn>false</DefaultMultiColumn>
+      <DefaultOrderByRow>false</DefaultOrderByRow>
+      <DefaultShowBorders>false</DefaultShowBorders>
+      <RangeLoInclusive>true</RangeLoInclusive>
+      <RangeHiInclusive>true</RangeHiInclusive>
+      <FixRangeLen>0000000000000000</FixRangeLen>
+      <OnChangeActionItems></OnChangeActionItems>
+      <OnSelectActionItems></OnSelectActionItems>
+      <OnUnlockActionItems></OnUnlockActionItems>
+      <OnLockActionItems></OnLockActionItems>
+    </FieldProperties>
+    <FieldProperties>
+      <IsAnd>false</IsAnd>
+      <Name>Fiscal Day In Year</Name>
+      <OneAndOnlyOne>false</OneAndOnlyOne>
+      <NumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </NumberPresentation>
+      <DefaultNumberPresentation>
+        <Type>INTEGER</Type>
+        <nDec>0</nDec>
+        <UseThou>1</UseThou>
+        <Fmt>###0</Fmt>
+        <Dec>.</Dec>
+        <Thou></Thou>
+      </DefaultNumberPresentation>
+      <NumberPresentationSurvive>true</NumberPresentationSurvive>
+      <ShowAlternatives>false</ShowAlternatives>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>0</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+      </SortCriteria>
+      <DefaultTextAdjust>0</DefaultTextAdjust>
+      <DefaultNumAdjust>2</DefaultNumAdjust>
+      <DefaultMultiLine>0</DefaultMultiLine>
+      <DefaultMultiColumn>false</DefaultMultiColumn>
+      <DefaultOrderByRow>false</DefaultOrderByRow>
+      <DefaultShowBorders>false</DefaultShowBorders>
+      <RangeLoInclusive>true</RangeLoInclusive>
+      <RangeHiInclusive>true</RangeHiInclusive>
+      <FixRangeLen>0000000000000000</FixRangeLen>
+      <OnChangeActionItems></OnChangeActionItems>
+      <OnSelectActionItems></OnSelectActionItems>
+      <OnUnlockActionItems></OnUnlockActionItems>
+      <OnLockActionItems></OnLockActionItems>
+    </FieldProperties>
+    <FieldProperties>
+      <IsAnd>false</IsAnd>
+      <Name>Fiscal Period</Name>
+      <OneAndOnlyOne>false</OneAndOnlyOne>
+      <NumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </NumberPresentation>
+      <DefaultNumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
         <Thou></Thou>
       </DefaultNumberPresentation>
       <NumberPresentationSurvive>true</NumberPresentationSurvive>
@@ -7572,6 +8004,96 @@
         <SortByFrequency>0</SortByFrequency>
         <SortByNumeric>0</SortByNumeric>
         <SortByAscii>1</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+      </SortCriteria>
+      <DefaultTextAdjust>0</DefaultTextAdjust>
+      <DefaultNumAdjust>2</DefaultNumAdjust>
+      <DefaultMultiLine>0</DefaultMultiLine>
+      <DefaultMultiColumn>false</DefaultMultiColumn>
+      <DefaultOrderByRow>false</DefaultOrderByRow>
+      <DefaultShowBorders>false</DefaultShowBorders>
+      <RangeLoInclusive>true</RangeLoInclusive>
+      <RangeHiInclusive>true</RangeHiInclusive>
+      <FixRangeLen>0000000000000000</FixRangeLen>
+      <OnChangeActionItems></OnChangeActionItems>
+      <OnSelectActionItems></OnSelectActionItems>
+      <OnUnlockActionItems></OnUnlockActionItems>
+      <OnLockActionItems></OnLockActionItems>
+    </FieldProperties>
+    <FieldProperties>
+      <IsAnd>false</IsAnd>
+      <Name>Temp Employee ID</Name>
+      <OneAndOnlyOne>false</OneAndOnlyOne>
+      <NumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </NumberPresentation>
+      <DefaultNumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </DefaultNumberPresentation>
+      <NumberPresentationSurvive>true</NumberPresentationSurvive>
+      <ShowAlternatives>false</ShowAlternatives>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>0</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+      </SortCriteria>
+      <DefaultTextAdjust>0</DefaultTextAdjust>
+      <DefaultNumAdjust>2</DefaultNumAdjust>
+      <DefaultMultiLine>0</DefaultMultiLine>
+      <DefaultMultiColumn>false</DefaultMultiColumn>
+      <DefaultOrderByRow>false</DefaultOrderByRow>
+      <DefaultShowBorders>false</DefaultShowBorders>
+      <RangeLoInclusive>true</RangeLoInclusive>
+      <RangeHiInclusive>true</RangeHiInclusive>
+      <FixRangeLen>0000000000000000</FixRangeLen>
+      <OnChangeActionItems></OnChangeActionItems>
+      <OnSelectActionItems></OnSelectActionItems>
+      <OnUnlockActionItems></OnUnlockActionItems>
+      <OnLockActionItems></OnLockActionItems>
+    </FieldProperties>
+    <FieldProperties>
+      <IsAnd>false</IsAnd>
+      <Name>Quota</Name>
+      <OneAndOnlyOne>false</OneAndOnlyOne>
+      <NumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </NumberPresentation>
+      <DefaultNumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </DefaultNumberPresentation>
+      <NumberPresentationSurvive>true</NumberPresentationSurvive>
+      <ShowAlternatives>false</ShowAlternatives>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>0</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
         <Expression></Expression>

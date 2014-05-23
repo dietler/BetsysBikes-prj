@@ -10,6 +10,11 @@ SET TimestampFormat='M/D/YYYY h:mm:ss[.fff] TT';
 SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec';
 SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun';
 
+//Dashboard Buttons
+let vColHighlight = rgb(210, 255, 210);
+let vColNoHighlight = rgb(255, 255, 255);
+let vViewMode = 'Year';
+
 OLEDB CONNECT32 TO [Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=C:\Users\Andy\SkyDrive\QlikView\Apps\Betsys Bikes\Data Files\Certification.mdb;Mode=Share Deny None;Extended Properties="";Jet OLEDB:System database="";Jet OLEDB:Registry Path="";Jet OLEDB:Database Password="";Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password="";Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False];
 ///$tab Sales Orders
 [Sales Order Details]:
@@ -32,7 +37,7 @@ LOAD AccountNumber AS [Sales Order Account Number],
     CustomerID,
     Freight,
     LocalCurrency,
-    OrderDate,
+    Date(OrderDate) AS OrderDate,
     PurchaseOrderNumber,
     RevisionNumber,
     SalesOrderID,
@@ -41,7 +46,7 @@ LOAD AccountNumber AS [Sales Order Account Number],
     ShipToAddressID,
     Status AS [Sales Order Status],
     TaxAmt,
-	IF(OnlineOrderFlag<>0, 'Online', TerritoryID) AS TerritoryID;
+	IF(OnlineOrderFlag<>0, 'Website', TerritoryID) AS TerritoryID;
 SQL SELECT *
 FROM SalesOrderHeader;
 
@@ -62,7 +67,9 @@ LOAD CountryRegionCode,
 SQL SELECT *
 FROM SalesTerritory;
 
-
+Left Join ([Sales Order Headers]) IntervalMatch(OrderDate,TerritoryID) LOAD [Territory Start Date], [Territory End Date], TerritoryID Resident [Sales Territory History];
+join ([Sales Order Headers]) LOAD * Resident [Sales Territory History];
+drop Table [Sales Territory History];
 ///$tab Employees
 [Employees]:
 LOAD BaseRate,
@@ -280,9 +287,14 @@ AutoGenerate
 // ********** Master Calendar **********
 [Master Calendar]:
 LOAD
-	TempDate AS OrderDate,
+	Date(TempDate) AS OrderDate,
+	Left(Date(TempDate, 'MM/DD'), 5) AS [Day And Month], 
+	dayNumberOfYear(TempDate) AS [Day In Year],
 	Month(TempDate) AS Month,
+	MonthName(TempDate) AS [Month Year],
 	Year(TempDate) AS Year,
+	dayNumberOfYear((AddMonths(TempDate, 6))) AS [Fiscal Day In Year],
+	Dual(Month(TempDate),Num(Month(AddMonths(TempDate, 6)))) AS [Fiscal Period],
 	Month(AddMonths(TempDate, 6)) AS [Fiscal Month],
 	MonthName(AddMonths(TempDate, 6)) AS [Fiscal Month Year],
 	Year(AddMonths(TempDate, 6)) AS [Fiscal Year]
@@ -307,4 +319,24 @@ LOAD * INLINE [
     Ground, 1
     Cargo Transit, 5
 ];
+
+///$tab Quota
+[Quotas]:
+CrossTable([Temp Employee ID], Quota)
+LOAD MonthName(F1) as [Month Year], 
+     [275], 
+     [276], 
+     [277], 
+     [279], 
+     [280], 
+     [282], 
+     [284], 
+     [286], 
+     [288], 
+     [289], 
+     [290], 
+     Website
+FROM
+[..\Data Files\Certification Data.xlsx]
+(ooxml, embedded labels, table is Quota);
 

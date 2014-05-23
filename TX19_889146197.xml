@@ -30,7 +30,14 @@
         </SecondaryCol>
         <Alpha>255</Alpha>
       </Color>
-      <Font></Font>
+      <Font>
+        <FontName>Arial</FontName>
+        <PointSize1000>8000</PointSize1000>
+        <Underline>false</Underline>
+        <Bold>true</Bold>
+        <Italic>false</Italic>
+        <DropShadow>false</DropShadow>
+      </Font>
       <CaptionFont>
         <FontName>Tahoma</FontName>
         <PointSize1000>10000</PointSize1000>
@@ -39,9 +46,7 @@
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </CaptionFont>
-      <Name>
-        <v>Sales</v>
-      </Name>
+      <Name></Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
@@ -62,7 +67,7 @@
       <HelpText></HelpText>
       <ObjectId></ObjectId>
       <ShrinkFrameToData>true</ShrinkFrameToData>
-      <ShowCaption>true</ShowCaption>
+      <ShowCaption>false</ShowCaption>
       <MultiLine>0</MultiLine>
       <ActiveBgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -223,9 +228,9 @@
       <FillPattern>COLORAREA_PATTERN1</FillPattern>
       <PrimaryCol>
         <Col>
-          <Red>54</Red>
-          <Green>54</Green>
-          <Blue>54</Blue>
+          <Red>255</Red>
+          <Green>255</Green>
+          <Blue>255</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
@@ -241,9 +246,9 @@
       <FillPattern>COLORAREA_PATTERN1</FillPattern>
       <PrimaryCol>
         <Col>
-          <Red>214</Red>
-          <Green>231</Green>
-          <Blue>248</Blue>
+          <Red>192</Red>
+          <Green>192</Green>
+          <Blue>192</Blue>
           <Alpha>255</Alpha>
         </Col>
         <IsCalculated>false</IsCalculated>
@@ -256,14 +261,12 @@
     <BkgMode>BKG_SOLID</BkgMode>
     <Bmp enctype="base64"></Bmp>
     <BkgAlpha>255</BkgAlpha>
-    <Text>
-      <v>=Money(Ceil(Sum($(vLineItemSale))), '$#,###.')</v>
-    </Text>
+    <Text></Text>
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>
     <AllowHorizontalScrollBar>false</AllowHorizontalScrollBar>
     <ActionItems></ActionItems>
   </Layout>
   <PrintSettings></PrintSettings>
-  <UserSized>false</UserSized>
+  <UserSized>true</UserSized>
 </TextObjectProperties>

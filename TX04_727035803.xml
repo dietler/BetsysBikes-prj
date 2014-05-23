@@ -10,24 +10,15 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>232</Red>
-            <Green>232</Green>
-            <Blue>232</Blue>
+            <Red>4</Red>
+            <Green>108</Green>
+            <Blue>193</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </PrimaryCol>
-        <SecondaryCol>
-          <Col>
-            <Red>200</Red>
-            <Green>200</Green>
-            <Blue>200</Blue>
-            <Alpha>255</Alpha>
-          </Col>
-          <IsCalculated>false</IsCalculated>
-          <ColorExpr></ColorExpr>
-        </SecondaryCol>
+        <SecondaryCol></SecondaryCol>
         <Alpha>255</Alpha>
       </Color>
       <Font></Font>
@@ -39,9 +30,7 @@
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </CaptionFont>
-      <Name>
-        <v>Sales</v>
-      </Name>
+      <Name></Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
@@ -62,7 +51,7 @@
       <HelpText></HelpText>
       <ObjectId></ObjectId>
       <ShrinkFrameToData>true</ShrinkFrameToData>
-      <ShowCaption>true</ShowCaption>
+      <ShowCaption>false</ShowCaption>
       <MultiLine>0</MultiLine>
       <ActiveBgColor>
         <Mode>COLORAREA_SOLID</Mode>
@@ -257,7 +246,7 @@
     <Bmp enctype="base64"></Bmp>
     <BkgAlpha>255</BkgAlpha>
     <Text>
-      <v>=Money(Ceil(Sum($(vLineItemSale))), '$#,###.')</v>
+      <v>=Sum({&lt;OrderDate = {&quot;&gt;=$(=AddMonths(Date('06/30/2009'),-12))&lt;=Date('06/30/2009'))&quot;} &gt;} $(vLineItemSale))</v>
     </Text>
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>

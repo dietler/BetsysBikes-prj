@@ -40,7 +40,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Sales</v>
+        <v>% of Quota</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -257,7 +257,7 @@
     <Bmp enctype="base64"></Bmp>
     <BkgAlpha>255</BkgAlpha>
     <Text>
-      <v>=Money(Ceil(Sum($(vLineItemSale))), '$#,###.')</v>
+      <v>=num(Sum($(vPercentOfQuota)), '##.#%')</v>
     </Text>
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>
