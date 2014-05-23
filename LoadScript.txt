@@ -25,6 +25,7 @@ LOAD CarrierTrackingNumber,
     SalesOrderDetailID,
     SalesOrderID,
     ShipDate,
+    Num(ShipDate) - Num(DueDate) AS [On Time Shipping],
     SpecialOfferID,
     UnitPrice,
     UnitPriceDiscount;
