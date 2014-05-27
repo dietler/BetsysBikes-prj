@@ -30,9 +30,16 @@
         </SecondaryCol>
         <Alpha>255</Alpha>
       </Color>
-      <Font></Font>
+      <Font>
+        <FontName>Tahoma</FontName>
+        <PointSize1000>8000</PointSize1000>
+        <Underline>false</Underline>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+        <DropShadow>false</DropShadow>
+      </Font>
       <CaptionFont>
-        <FontName>Arial</FontName>
+        <FontName>Tahoma</FontName>
         <PointSize1000>10000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
@@ -171,7 +178,7 @@
       <Show>
         <Always>false</Always>
         <Expression>
-          <v>vViewMode='Year'</v>
+          <v>vViewMode='Month'</v>
         </Expression>
       </Show>
       <AllowMoveSize>true</AllowMoveSize>
@@ -225,7 +232,7 @@
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-12))&lt;=$(=Date($(vDashboardDate)))&quot;} &gt;} $(vLineItemSale))</v>
+        <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-1))&lt;=$(=Date($(vDashboardDate)))&quot;} &gt;} $(vLineItemMargin))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -249,7 +256,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-24))&lt;=$(=AddMonths(Date($(vDashboardDate)),-12))&quot;} &gt;} $(vLineItemSale))</v>
+        <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-13))&lt;=$(=AddMonths(Date($(vDashboardDate)),-12))&quot;} &gt;} $(vLineItemMargin))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -1029,7 +1036,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Fiscal Period</Name>
+        <Name>Day And Month</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title></Title>
@@ -1037,7 +1044,7 @@
       <SortCriteria>
         <SortByState>1</SortByState>
         <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
+        <SortByNumeric>0</SortByNumeric>
         <SortByAscii>0</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
@@ -1473,10 +1480,10 @@
     <Texts></Texts>
     <Title>
       <Title>
-        <v>Sales</v>
+        <v>Margin</v>
       </Title>
       <Font>
-        <FontName>Arial</FontName>
+        <FontName>Tahoma</FontName>
         <PointSize1000>11000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
@@ -2980,7 +2987,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Fiscal Period</DimName>
+          <DimName>Day And Month</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -2997,7 +3004,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-12))&lt;=$(=Date($(vDashboardDate)))&quot;} &gt;} $(vLineItemSale))</v>
+              <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-1))&lt;=$(=Date($(vDashboardDate)))&quot;} &gt;} $(vLineItemMargin))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -3484,7 +3491,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-24))&lt;=$(=AddMonths(Date($(vDashboardDate)),-12))&quot;} &gt;} $(vLineItemSale))</v>
+              <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-13))&lt;=$(=AddMonths(Date($(vDashboardDate)),-12))&quot;} &gt;} $(vLineItemMargin))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>

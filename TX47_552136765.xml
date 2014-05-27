@@ -1,7 +1,7 @@
 ﻿<TextObjectProperties>
   <Layout>
     <Frame>
-      <BorderWidth>4</BorderWidth>
+      <BorderWidth>0</BorderWidth>
       <BorderEffect>FLAT</BorderEffect>
       <Color>
         <Mode>COLORAREA_SOLID</Mode>
@@ -10,18 +10,34 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>4</Red>
-            <Green>108</Green>
-            <Blue>193</Blue>
+            <Red>122</Red>
+            <Green>255</Green>
+            <Blue>122</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
           <ColorExpr></ColorExpr>
         </PrimaryCol>
-        <SecondaryCol></SecondaryCol>
+        <SecondaryCol>
+          <Col>
+            <Red>200</Red>
+            <Green>200</Green>
+            <Blue>200</Blue>
+            <Alpha>255</Alpha>
+          </Col>
+          <IsCalculated>false</IsCalculated>
+          <ColorExpr></ColorExpr>
+        </SecondaryCol>
         <Alpha>255</Alpha>
       </Color>
-      <Font></Font>
+      <Font>
+        <FontName>Franklin Gothic Book</FontName>
+        <PointSize1000>11000</PointSize1000>
+        <Underline>false</Underline>
+        <Bold>false</Bold>
+        <Italic>false</Italic>
+        <DropShadow>false</DropShadow>
+      </Font>
       <CaptionFont>
         <FontName>Tahoma</FontName>
         <PointSize1000>10000</PointSize1000>
@@ -30,7 +46,9 @@
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </CaptionFont>
-      <Name></Name>
+      <Name>
+        <v>High</v>
+      </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
       <Detached>false</Detached>
@@ -87,9 +105,9 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>232</Red>
-            <Green>232</Green>
-            <Blue>232</Blue>
+            <Red>122</Red>
+            <Green>255</Green>
+            <Blue>122</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -132,9 +150,9 @@
         <FillPattern>COLORAREA_PATTERN1</FillPattern>
         <PrimaryCol>
           <Col>
-            <Red>54</Red>
-            <Green>54</Green>
-            <Blue>54</Blue>
+            <Red>0</Red>
+            <Green>128</Green>
+            <Blue>0</Blue>
             <Alpha>255</Alpha>
           </Col>
           <IsCalculated>false</IsCalculated>
@@ -230,15 +248,13 @@
       <FillPattern>COLORAREA_PATTERN1</FillPattern>
       <PrimaryCol>
         <Col>
-          <Red>214</Red>
-          <Green>231</Green>
-          <Blue>248</Blue>
+          <Red>255</Red>
+          <Green>210</Green>
+          <Blue>210</Blue>
           <Alpha>255</Alpha>
         </Col>
-        <IsCalculated>true</IsCalculated>
-        <ColorExpr>
-          <v>if(vViewMode = 'Quarter', $(vColHighlight), $(vColNoHighlight))</v>
-        </ColorExpr>
+        <IsCalculated>false</IsCalculated>
+        <ColorExpr></ColorExpr>
       </PrimaryCol>
       <SecondaryCol></SecondaryCol>
       <Alpha>255</Alpha>
@@ -248,25 +264,12 @@
     <Bmp enctype="base64"></Bmp>
     <BkgAlpha>255</BkgAlpha>
     <Text>
-      <v>Quarter</v>
+      <v>=Num(Count({&lt;[On Time Status]  = {'1 Day Late'}&gt;} SalesOrderID),'###,###.')</v>
     </Text>
     <ImageRepresentation></ImageRepresentation>
     <AllowVerticalScrollBar>false</AllowVerticalScrollBar>
     <AllowHorizontalScrollBar>false</AllowHorizontalScrollBar>
-    <ActionItems>
-      <ActionItemDef>
-        <Type>TYPE_SET_VALUE</Type>
-        <Parameters>
-          <StringExpr>
-            <v>vViewMode</v>
-          </StringExpr>
-          <StringExpr>
-            <v>Quarter</v>
-          </StringExpr>
-        </Parameters>
-        <StateName></StateName>
-      </ActionItemDef>
-    </ActionItems>
+    <ActionItems></ActionItems>
   </Layout>
   <PrintSettings></PrintSettings>
   <UserSized>true</UserSized>

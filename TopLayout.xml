@@ -35,9 +35,9 @@
     <FillPattern>COLORAREA_PATTERN1</FillPattern>
     <PrimaryCol>
       <Col>
-        <Red>248</Red>
-        <Green>248</Green>
-        <Blue>248</Blue>
+        <Red>255</Red>
+        <Green>255</Green>
+        <Blue>255</Blue>
         <Alpha>255</Alpha>
       </Col>
       <IsCalculated>false</IsCalculated>

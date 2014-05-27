@@ -40,7 +40,7 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Current</v>
+        <v>=Only(Year)</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -169,7 +169,7 @@
       <TextAdjustHorizontal>0</TextAdjustHorizontal>
       <TextAdjustVertical>4</TextAdjustVertical>
       <Show>
-        <Always>false</Always>
+        <Always>true</Always>
         <Expression>
           <v>vViewMode='Year'</v>
         </Expression>
@@ -219,13 +219,30 @@
     <WindowTitle></WindowTitle>
     <GraphMode>GRAPH_MODE_LINE</GraphMode>
     <TotalString></TotalString>
-    <ErrorMessageOverrides></ErrorMessageOverrides>
+    <ErrorMessageOverrides>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr>
+        <v>Please select a single Year</v>
+      </StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+    </ErrorMessageOverrides>
     <MiniChartLook>false</MiniChartLook>
   </GraphLayout>
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-12))&lt;=$(=Date($(vDashboardDate)))&quot;} &gt;} $(vLineItemSale))</v>
+        <v>=Sum($(vLineItemSale))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -249,7 +266,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-24))&lt;=$(=AddMonths(Date($(vDashboardDate)),-12))&quot;} &gt;} $(vLineItemSale))</v>
+        <v>Sum({$&lt;Year={$(=Only(Year)-1)}&gt;}$(vLineItemSale))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -289,7 +306,7 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Current</v>
+        <v>=Only(Year)</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -665,7 +682,7 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Last Year</v>
+        <v>=Only(Year)-1</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -675,10 +692,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>MONEY</Type>
+        <Type>UNKNOWN</Type>
         <nDec>10</nDec>
         <UseThou>0</UseThou>
-        <Fmt>$#,##0.00;($#,##0.00)</Fmt>
+        <Fmt></Fmt>
         <Dec>.</Dec>
         <Thou>,</Thou>
       </NumberPresentation>
@@ -1309,7 +1326,9 @@
   <CubeData></CubeData>
   <SuppressZero>true</SuppressZero>
   <SuppressMissing>true</SuppressMissing>
-  <EvaluationCondition></EvaluationCondition>
+  <EvaluationCondition>
+    <v>Count (DISTINCT Year)=1</v>
+  </EvaluationCondition>
   <ChartProperties>
     <FastChangeInChart>false</FastChangeInChart>
     <ChartMarginSize>21</ChartMarginSize>
@@ -1398,14 +1417,7 @@
         <MinorStepMode>0</MinorStepMode>
       </AxisDef>
       <AxisDef>
-        <Units>
-          <Unit>
-            <v>$</v>
-          </Unit>
-          <kUnit></kUnit>
-          <MUnit></MUnit>
-          <GUnit></GUnit>
-        </Units>
+        <Units></Units>
         <Backcast></Backcast>
         <Forecast></Forecast>
         <Max></Max>
@@ -1546,7 +1558,7 @@
       </Position>
       <RelativePosition></RelativePosition>
       <RelativePositionType>0</RelativePositionType>
-      <Show>false</Show>
+      <Show>true</Show>
       <ShowNumbers>false</ShowNumbers>
       <DockedPosition>POSITION_RIGHT</DockedPosition>
       <BgColor>
@@ -2945,9 +2957,9 @@
     </DefaultExprCellVariations>
     <StraightShowOthers>false</StraightShowOthers>
     <InterFieldSortOrder>
-      <int>2</int>
       <int>0</int>
       <int>1</int>
+      <int>2</int>
     </InterFieldSortOrder>
     <ExpressionPosition>-1</ExpressionPosition>
     <NumberOfLeftDimensions>255</NumberOfLeftDimensions>
@@ -2997,7 +3009,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-12))&lt;=$(=Date($(vDashboardDate)))&quot;} &gt;} $(vLineItemSale))</v>
+              <v>=Sum($(vLineItemSale))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -3035,7 +3047,7 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Current</v>
+              <v>=Only(Year)</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -3484,7 +3496,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-24))&lt;=$(=AddMonths(Date($(vDashboardDate)),-12))&quot;} &gt;} $(vLineItemSale))</v>
+              <v>Sum({$&lt;Year={$(=Only(Year)-1)}&gt;}$(vLineItemSale))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -3522,7 +3534,7 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Last Year</v>
+              <v>=Only(Year)-1</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -3532,10 +3544,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>MONEY</Type>
+              <Type>UNKNOWN</Type>
               <nDec>10</nDec>
               <UseThou>0</UseThou>
-              <Fmt>$#,##0.00;($#,##0.00)</Fmt>
+              <Fmt></Fmt>
               <Dec>.</Dec>
               <Thou>,</Thou>
             </NumberPresentation>
@@ -3883,14 +3895,7 @@
             <MiniChartCellSettings></MiniChartCellSettings>
           </ExpressionVisual>
           <AxisData>
-            <Units>
-              <Unit>
-                <v>$</v>
-              </Unit>
-              <kUnit></kUnit>
-              <MUnit></MUnit>
-              <GUnit></GUnit>
-            </Units>
+            <Units></Units>
             <Backcast></Backcast>
             <Forecast></Forecast>
             <Max></Max>

@@ -1229,6 +1229,96 @@
     </FieldProperties>
     <FieldProperties>
       <IsAnd>false</IsAnd>
+      <Name>On Time Status</Name>
+      <OneAndOnlyOne>false</OneAndOnlyOne>
+      <NumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </NumberPresentation>
+      <DefaultNumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </DefaultNumberPresentation>
+      <NumberPresentationSurvive>true</NumberPresentationSurvive>
+      <ShowAlternatives>false</ShowAlternatives>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>0</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+      </SortCriteria>
+      <DefaultTextAdjust>0</DefaultTextAdjust>
+      <DefaultNumAdjust>0</DefaultNumAdjust>
+      <DefaultMultiLine>0</DefaultMultiLine>
+      <DefaultMultiColumn>false</DefaultMultiColumn>
+      <DefaultOrderByRow>false</DefaultOrderByRow>
+      <DefaultShowBorders>false</DefaultShowBorders>
+      <RangeLoInclusive>true</RangeLoInclusive>
+      <RangeHiInclusive>true</RangeHiInclusive>
+      <FixRangeLen>0000000000000000</FixRangeLen>
+      <OnChangeActionItems></OnChangeActionItems>
+      <OnSelectActionItems></OnSelectActionItems>
+      <OnUnlockActionItems></OnUnlockActionItems>
+      <OnLockActionItems></OnLockActionItems>
+    </FieldProperties>
+    <FieldProperties>
+      <IsAnd>false</IsAnd>
+      <Name>On Time Boolean</Name>
+      <OneAndOnlyOne>false</OneAndOnlyOne>
+      <NumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </NumberPresentation>
+      <DefaultNumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </DefaultNumberPresentation>
+      <NumberPresentationSurvive>true</NumberPresentationSurvive>
+      <ShowAlternatives>false</ShowAlternatives>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>0</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+      </SortCriteria>
+      <DefaultTextAdjust>0</DefaultTextAdjust>
+      <DefaultNumAdjust>2</DefaultNumAdjust>
+      <DefaultMultiLine>0</DefaultMultiLine>
+      <DefaultMultiColumn>false</DefaultMultiColumn>
+      <DefaultOrderByRow>false</DefaultOrderByRow>
+      <DefaultShowBorders>false</DefaultShowBorders>
+      <RangeLoInclusive>true</RangeLoInclusive>
+      <RangeHiInclusive>true</RangeHiInclusive>
+      <FixRangeLen>0000000000000000</FixRangeLen>
+      <OnChangeActionItems></OnChangeActionItems>
+      <OnSelectActionItems></OnSelectActionItems>
+      <OnUnlockActionItems></OnUnlockActionItems>
+      <OnLockActionItems></OnLockActionItems>
+    </FieldProperties>
+    <FieldProperties>
+      <IsAnd>false</IsAnd>
       <Name>CarrierTrackingNumber</Name>
       <OneAndOnlyOne>false</OneAndOnlyOne>
       <NumberPresentation>
@@ -1516,51 +1606,6 @@
         <Fmt></Fmt>
         <Dec></Dec>
         <Thou></Thou>
-      </DefaultNumberPresentation>
-      <NumberPresentationSurvive>true</NumberPresentationSurvive>
-      <ShowAlternatives>false</ShowAlternatives>
-      <SortCriteria>
-        <SortByState>1</SortByState>
-        <SortByFrequency>0</SortByFrequency>
-        <SortByNumeric>1</SortByNumeric>
-        <SortByAscii>0</SortByAscii>
-        <SortByLoadOrder>0</SortByLoadOrder>
-        <SortByExpression>0</SortByExpression>
-        <Expression></Expression>
-      </SortCriteria>
-      <DefaultTextAdjust>0</DefaultTextAdjust>
-      <DefaultNumAdjust>2</DefaultNumAdjust>
-      <DefaultMultiLine>0</DefaultMultiLine>
-      <DefaultMultiColumn>false</DefaultMultiColumn>
-      <DefaultOrderByRow>false</DefaultOrderByRow>
-      <DefaultShowBorders>false</DefaultShowBorders>
-      <RangeLoInclusive>true</RangeLoInclusive>
-      <RangeHiInclusive>true</RangeHiInclusive>
-      <FixRangeLen>0000000000000000</FixRangeLen>
-      <OnChangeActionItems></OnChangeActionItems>
-      <OnSelectActionItems></OnSelectActionItems>
-      <OnUnlockActionItems></OnUnlockActionItems>
-      <OnLockActionItems></OnLockActionItems>
-    </FieldProperties>
-    <FieldProperties>
-      <IsAnd>false</IsAnd>
-      <Name>On Time Shipping</Name>
-      <OneAndOnlyOne>false</OneAndOnlyOne>
-      <NumberPresentation>
-        <Type>UNKNOWN</Type>
-        <nDec>0</nDec>
-        <UseThou>0</UseThou>
-        <Fmt></Fmt>
-        <Dec></Dec>
-        <Thou></Thou>
-      </NumberPresentation>
-      <DefaultNumberPresentation>
-        <Type>REAL</Type>
-        <nDec>0</nDec>
-        <UseThou>0</UseThou>
-        <Fmt>##############</Fmt>
-        <Dec>.</Dec>
-        <Thou>,</Thou>
       </DefaultNumberPresentation>
       <NumberPresentationSurvive>true</NumberPresentationSurvive>
       <ShowAlternatives>false</ShowAlternatives>
@@ -3479,7 +3524,7 @@
     </FieldProperties>
     <FieldProperties>
       <IsAnd>false</IsAnd>
-      <Name>SalesPersonFlag</Name>
+      <Name>Sales Person</Name>
       <OneAndOnlyOne>false</OneAndOnlyOne>
       <NumberPresentation>
         <Type>UNKNOWN</Type>
@@ -7439,7 +7484,7 @@
     </FieldProperties>
     <FieldProperties>
       <IsAnd>false</IsAnd>
-      <Name>Name</Name>
+      <Name>Vendor Name</Name>
       <OneAndOnlyOne>false</OneAndOnlyOne>
       <NumberPresentation>
         <Type>UNKNOWN</Type>
@@ -7518,6 +7563,51 @@
       <DefaultMultiLine>0</DefaultMultiLine>
       <DefaultMultiColumn>false</DefaultMultiColumn>
       <DefaultOrderByRow>false</DefaultOrderByRow>
+      <DefaultShowBorders>false</DefaultShowBorders>
+      <RangeLoInclusive>true</RangeLoInclusive>
+      <RangeHiInclusive>true</RangeHiInclusive>
+      <FixRangeLen>0000000000000000</FixRangeLen>
+      <OnChangeActionItems></OnChangeActionItems>
+      <OnSelectActionItems></OnSelectActionItems>
+      <OnUnlockActionItems></OnUnlockActionItems>
+      <OnLockActionItems></OnLockActionItems>
+    </FieldProperties>
+    <FieldProperties>
+      <IsAnd>false</IsAnd>
+      <Name>Day</Name>
+      <OneAndOnlyOne>false</OneAndOnlyOne>
+      <NumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </NumberPresentation>
+      <DefaultNumberPresentation>
+        <Type>INTEGER</Type>
+        <nDec>0</nDec>
+        <UseThou>1</UseThou>
+        <Fmt>###0</Fmt>
+        <Dec>.</Dec>
+        <Thou></Thou>
+      </DefaultNumberPresentation>
+      <NumberPresentationSurvive>true</NumberPresentationSurvive>
+      <ShowAlternatives>false</ShowAlternatives>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>1</SortByNumeric>
+        <SortByAscii>0</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+      </SortCriteria>
+      <DefaultTextAdjust>1</DefaultTextAdjust>
+      <DefaultNumAdjust>1</DefaultNumAdjust>
+      <DefaultMultiLine>0</DefaultMultiLine>
+      <DefaultMultiColumn>true</DefaultMultiColumn>
+      <DefaultOrderByRow>true</DefaultOrderByRow>
       <DefaultShowBorders>false</DefaultShowBorders>
       <RangeLoInclusive>true</RangeLoInclusive>
       <RangeHiInclusive>true</RangeHiInclusive>
@@ -7648,11 +7738,11 @@
         <SortByExpression>0</SortByExpression>
         <Expression></Expression>
       </SortCriteria>
-      <DefaultTextAdjust>0</DefaultTextAdjust>
-      <DefaultNumAdjust>2</DefaultNumAdjust>
+      <DefaultTextAdjust>1</DefaultTextAdjust>
+      <DefaultNumAdjust>1</DefaultNumAdjust>
       <DefaultMultiLine>0</DefaultMultiLine>
-      <DefaultMultiColumn>false</DefaultMultiColumn>
-      <DefaultOrderByRow>false</DefaultOrderByRow>
+      <DefaultMultiColumn>true</DefaultMultiColumn>
+      <DefaultOrderByRow>true</DefaultOrderByRow>
       <DefaultShowBorders>false</DefaultShowBorders>
       <RangeLoInclusive>true</RangeLoInclusive>
       <RangeHiInclusive>true</RangeHiInclusive>
@@ -7738,11 +7828,11 @@
         <SortByExpression>0</SortByExpression>
         <Expression></Expression>
       </SortCriteria>
-      <DefaultTextAdjust>0</DefaultTextAdjust>
-      <DefaultNumAdjust>2</DefaultNumAdjust>
+      <DefaultTextAdjust>1</DefaultTextAdjust>
+      <DefaultNumAdjust>1</DefaultNumAdjust>
       <DefaultMultiLine>0</DefaultMultiLine>
-      <DefaultMultiColumn>false</DefaultMultiColumn>
-      <DefaultOrderByRow>false</DefaultOrderByRow>
+      <DefaultMultiColumn>true</DefaultMultiColumn>
+      <DefaultOrderByRow>true</DefaultOrderByRow>
       <DefaultShowBorders>false</DefaultShowBorders>
       <RangeLoInclusive>true</RangeLoInclusive>
       <RangeHiInclusive>true</RangeHiInclusive>

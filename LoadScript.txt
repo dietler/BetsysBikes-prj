@@ -17,7 +17,16 @@ let vViewMode = 'Year';
 
 OLEDB CONNECT32 TO [Provider=Microsoft.Jet.OLEDB.4.0;User ID=Admin;Data Source=C:\Users\Andy\SkyDrive\QlikView\Apps\Betsys Bikes\Data Files\Certification.mdb;Mode=Share Deny None;Extended Properties="";Jet OLEDB:System database="";Jet OLEDB:Registry Path="";Jet OLEDB:Database Password="";Jet OLEDB:Engine Type=5;Jet OLEDB:Database Locking Mode=1;Jet OLEDB:Global Partial Bulk Ops=2;Jet OLEDB:Global Bulk Transactions=1;Jet OLEDB:New Database Password="";Jet OLEDB:Create System Database=False;Jet OLEDB:Encrypt Database=False;Jet OLEDB:Don't Copy Locale on Compact=False;Jet OLEDB:Compact Without Replica Repair=False;Jet OLEDB:SFP=False];
 ///$tab Sales Orders
+
 [Sales Order Details]:
+LOAD If([tOn Time] < 1,Dual('On Time',0),
+		If([tOn Time] = 1,Dual('1 Day Late',1),
+			If([tOn Time] = 2,Dual('2 Days Late',2),
+				If([tOn Time] = 3,Dual('3 Days Late',3),
+					If([tOn Time] >3,Dual('4+ Days Late',4),
+		'Error'))))) AS [On Time Status],
+	If([tOn Time] < 1,1,0) AS [On Time Boolean],
+*;
 LOAD CarrierTrackingNumber,
     DueDate,
     OrderQty,
@@ -25,12 +34,14 @@ LOAD CarrierTrackingNumber,
     SalesOrderDetailID,
     SalesOrderID,
     ShipDate,
-    Num(ShipDate) - Num(DueDate) AS [On Time Shipping],
+    Num(ShipDate) - Num(DueDate) AS [tOn Time],
     SpecialOfferID,
     UnitPrice,
     UnitPriceDiscount;
 SQL SELECT *
 FROM SalesOrderDetail;
+
+Drop Field [tOn Time];
 
 [Sales Order Headers]:
 LOAD AccountNumber AS [Sales Order Account Number],
@@ -93,7 +104,7 @@ LOAD BaseRate,
     PayFrequency,
     Phone,
     SalariedFlag,
-    IF (EmployeeBusinessEntityID>273, '1', '0') AS SalesPersonFlag,
+    IF (EmployeeBusinessEntityID>273, LastName & ', ' & FirstName & ' ' & MiddleName & '.',) AS [Sales Person],
     SalesTerritoryKey,
     SickLeaveHours,
     StartDate AS [Employee Start Date],
@@ -256,7 +267,7 @@ LOAD AccountNumber,
     ActiveFlag,
     BusinessEntityID AS [Vendor ID],
     CreditRating,
-    Name,
+    Name AS [Vendor Name],
     PreferredVendorStatus;
 SQL SELECT *
 FROM Vendor
@@ -289,6 +300,7 @@ AutoGenerate
 [Master Calendar]:
 LOAD
 	Date(TempDate) AS OrderDate,
+	Day(TempDate) AS Day,
 	Left(Date(TempDate, 'MM/DD'), 5) AS [Day And Month], 
 	dayNumberOfYear(TempDate) AS [Day In Year],
 	Month(TempDate) AS Month,
