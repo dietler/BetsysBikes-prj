@@ -7799,6 +7799,51 @@
     </FieldProperties>
     <FieldProperties>
       <IsAnd>false</IsAnd>
+      <Name>Quarter</Name>
+      <OneAndOnlyOne>false</OneAndOnlyOne>
+      <NumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </NumberPresentation>
+      <DefaultNumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </DefaultNumberPresentation>
+      <NumberPresentationSurvive>true</NumberPresentationSurvive>
+      <ShowAlternatives>false</ShowAlternatives>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>0</SortByNumeric>
+        <SortByAscii>1</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+      </SortCriteria>
+      <DefaultTextAdjust>0</DefaultTextAdjust>
+      <DefaultNumAdjust>2</DefaultNumAdjust>
+      <DefaultMultiLine>0</DefaultMultiLine>
+      <DefaultMultiColumn>false</DefaultMultiColumn>
+      <DefaultOrderByRow>false</DefaultOrderByRow>
+      <DefaultShowBorders>false</DefaultShowBorders>
+      <RangeLoInclusive>true</RangeLoInclusive>
+      <RangeHiInclusive>true</RangeHiInclusive>
+      <FixRangeLen>0000000000000000</FixRangeLen>
+      <OnChangeActionItems></OnChangeActionItems>
+      <OnSelectActionItems></OnSelectActionItems>
+      <OnUnlockActionItems></OnUnlockActionItems>
+      <OnLockActionItems></OnLockActionItems>
+    </FieldProperties>
+    <FieldProperties>
+      <IsAnd>false</IsAnd>
       <Name>Year</Name>
       <OneAndOnlyOne>false</OneAndOnlyOne>
       <NumberPresentation>
@@ -7959,6 +8004,51 @@
         <SortByFrequency>0</SortByFrequency>
         <SortByNumeric>1</SortByNumeric>
         <SortByAscii>0</SortByAscii>
+        <SortByLoadOrder>0</SortByLoadOrder>
+        <SortByExpression>0</SortByExpression>
+        <Expression></Expression>
+      </SortCriteria>
+      <DefaultTextAdjust>0</DefaultTextAdjust>
+      <DefaultNumAdjust>2</DefaultNumAdjust>
+      <DefaultMultiLine>0</DefaultMultiLine>
+      <DefaultMultiColumn>false</DefaultMultiColumn>
+      <DefaultOrderByRow>false</DefaultOrderByRow>
+      <DefaultShowBorders>false</DefaultShowBorders>
+      <RangeLoInclusive>true</RangeLoInclusive>
+      <RangeHiInclusive>true</RangeHiInclusive>
+      <FixRangeLen>0000000000000000</FixRangeLen>
+      <OnChangeActionItems></OnChangeActionItems>
+      <OnSelectActionItems></OnSelectActionItems>
+      <OnUnlockActionItems></OnUnlockActionItems>
+      <OnLockActionItems></OnLockActionItems>
+    </FieldProperties>
+    <FieldProperties>
+      <IsAnd>false</IsAnd>
+      <Name>Fiscal Quarter</Name>
+      <OneAndOnlyOne>false</OneAndOnlyOne>
+      <NumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </NumberPresentation>
+      <DefaultNumberPresentation>
+        <Type>UNKNOWN</Type>
+        <nDec>0</nDec>
+        <UseThou>0</UseThou>
+        <Fmt></Fmt>
+        <Dec></Dec>
+        <Thou></Thou>
+      </DefaultNumberPresentation>
+      <NumberPresentationSurvive>true</NumberPresentationSurvive>
+      <ShowAlternatives>false</ShowAlternatives>
+      <SortCriteria>
+        <SortByState>1</SortByState>
+        <SortByFrequency>0</SortByFrequency>
+        <SortByNumeric>0</SortByNumeric>
+        <SortByAscii>1</SortByAscii>
         <SortByLoadOrder>0</SortByLoadOrder>
         <SortByExpression>0</SortByExpression>
         <Expression></Expression>

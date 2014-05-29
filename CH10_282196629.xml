@@ -1327,7 +1327,7 @@
   <SuppressZero>true</SuppressZero>
   <SuppressMissing>true</SuppressMissing>
   <EvaluationCondition>
-    <v>Count (DISTINCT Year)=1</v>
+    <v>Count(DISTINCT Year)=1 AND Count(DISTINCT Day)&gt;1</v>
   </EvaluationCondition>
   <ChartProperties>
     <FastChangeInChart>false</FastChangeInChart>

@@ -305,10 +305,12 @@ LOAD
 	dayNumberOfYear(TempDate) AS [Day In Year],
 	Month(TempDate) AS Month,
 	MonthName(TempDate) AS [Month Year],
+	'Q' & ceil(month(TempDate) / 3) AS Quarter,
 	Year(TempDate) AS Year,
 	dayNumberOfYear((AddMonths(TempDate, 6))) AS [Fiscal Day In Year],
 	Dual(Month(TempDate),Num(Month(AddMonths(TempDate, 6)))) AS [Fiscal Period],
 	Month(AddMonths(TempDate, 6)) AS [Fiscal Month],
+	'Q' & ceil(month(AddMonths(TempDate, 6)) / 3) AS [Fiscal Quarter],
 	MonthName(AddMonths(TempDate, 6)) AS [Fiscal Month Year],
 	Year(AddMonths(TempDate, 6)) AS [Fiscal Year]
 Resident TempCal

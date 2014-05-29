@@ -1476,10 +1476,10 @@
         <v>Sales</v>
       </Title>
       <Font>
-        <FontName>Arial</FontName>
-        <PointSize1000>11000</PointSize1000>
+        <FontName>Franklin Gothic Book</FontName>
+        <PointSize1000>12000</PointSize1000>
         <Underline>false</Underline>
-        <Bold>true</Bold>
+        <Bold>false</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </Font>

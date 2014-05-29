@@ -40,7 +40,9 @@
         <DropShadow>false</DropShadow>
       </CaptionFont>
       <Name>
-        <v>Current</v>
+        <v>=AddMonths(Date(GetFieldSelections(OrderDate)),-1)
+&amp; ' to ' &amp;
+GetFieldSelections(OrderDate)</v>
       </Name>
       <Bmp enctype="base64"></Bmp>
       <BmpMode>0</BmpMode>
@@ -169,9 +171,9 @@
       <TextAdjustHorizontal>0</TextAdjustHorizontal>
       <TextAdjustVertical>4</TextAdjustVertical>
       <Show>
-        <Always>false</Always>
+        <Always>true</Always>
         <Expression>
-          <v>vViewMode='Quarter'</v>
+          <v>vViewMode='Year'</v>
         </Expression>
       </Show>
       <AllowMoveSize>true</AllowMoveSize>
@@ -219,13 +221,30 @@
     <WindowTitle></WindowTitle>
     <GraphMode>GRAPH_MODE_LINE</GraphMode>
     <TotalString></TotalString>
-    <ErrorMessageOverrides></ErrorMessageOverrides>
+    <ErrorMessageOverrides>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr>
+        <v>Please select a single Day</v>
+      </StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+      <StringExpr></StringExpr>
+    </ErrorMessageOverrides>
     <MiniChartLook>false</MiniChartLook>
   </GraphLayout>
   <_ExpressionDatas>
     <ExpressionData>
       <Definition>
-        <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-3))&lt;=$(=Date($(vDashboardDate)))&quot;} &gt;} $(vLineItemMargin))</v>
+        <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date(GetFieldSelections(OrderDate)),-1))&lt;=$(=Date(GetFieldSelections(OrderDate)))&quot;} &gt;} $(vLineItemSale))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -249,7 +268,7 @@
     </ExpressionData>
     <ExpressionData>
       <Definition>
-        <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-15))&lt;=$(=AddMonths(Date($(vDashboardDate)),-12))&quot;} &gt;} $(vLineItemMargin))</v>
+        <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date(GetFieldSelections(OrderDate)),-13))&lt;=$(=AddMonths(Date(GetFieldSelections(OrderDate)),-12))&quot;} &gt;} $(vLineItemSale))</v>
       </Definition>
       <Enable>true</Enable>
       <Present>false</Present>
@@ -289,7 +308,9 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Current</v>
+        <v>=AddMonths(Date(GetFieldSelections(OrderDate)),-1)
+&amp; ' to ' &amp;
+GetFieldSelections(OrderDate)</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -665,7 +686,9 @@
       <BckAsLine>true</BckAsLine>
       <BckAsSymbol>false</BckAsSymbol>
       <Label>
-        <v>Last Year</v>
+        <v>=AddMonths(Date(GetFieldSelections(OrderDate)),-13)
+&amp; ' to ' &amp;
+AddMonths(Date(GetFieldSelections(OrderDate)),-12)</v>
       </Label>
       <BorderWidth>0</BorderWidth>
       <Invisible>false</Invisible>
@@ -675,10 +698,10 @@
       <NumAdjust>2</NumAdjust>
       <VerticalAdjust>4</VerticalAdjust>
       <NumberPresentation>
-        <Type>MONEY</Type>
+        <Type>UNKNOWN</Type>
         <nDec>10</nDec>
         <UseThou>0</UseThou>
-        <Fmt>$#,##0.00;($#,##0.00)</Fmt>
+        <Fmt></Fmt>
         <Dec>.</Dec>
         <Thou>,</Thou>
       </NumberPresentation>
@@ -1029,7 +1052,7 @@
   <Dimensions>
     <ChartDimensionDataDef>
       <PseudoDef>
-        <Name>Fiscal Period</Name>
+        <Name>Day</Name>
         <Type>PRESENT</Type>
       </PseudoDef>
       <Title></Title>
@@ -1309,7 +1332,9 @@
   <CubeData></CubeData>
   <SuppressZero>true</SuppressZero>
   <SuppressMissing>true</SuppressMissing>
-  <EvaluationCondition></EvaluationCondition>
+  <EvaluationCondition>
+    <v>Count (DISTINCT OrderDate)=1</v>
+  </EvaluationCondition>
   <ChartProperties>
     <FastChangeInChart>false</FastChangeInChart>
     <ChartMarginSize>21</ChartMarginSize>
@@ -1398,14 +1423,7 @@
         <MinorStepMode>0</MinorStepMode>
       </AxisDef>
       <AxisDef>
-        <Units>
-          <Unit>
-            <v>$</v>
-          </Unit>
-          <kUnit></kUnit>
-          <MUnit></MUnit>
-          <GUnit></GUnit>
-        </Units>
+        <Units></Units>
         <Backcast></Backcast>
         <Forecast></Forecast>
         <Max></Max>
@@ -1473,7 +1491,7 @@
     <Texts></Texts>
     <Title>
       <Title>
-        <v>Margin</v>
+        <v>Sales - Month to Date</v>
       </Title>
       <Font>
         <FontName>Franklin Gothic Book</FontName>
@@ -1546,7 +1564,7 @@
       </Position>
       <RelativePosition></RelativePosition>
       <RelativePositionType>0</RelativePositionType>
-      <Show>false</Show>
+      <Show>true</Show>
       <ShowNumbers>false</ShowNumbers>
       <DockedPosition>POSITION_RIGHT</DockedPosition>
       <BgColor>
@@ -2980,7 +2998,7 @@
       <ExpansionData>
         <ExcludeList>false</ExcludeList>
         <Pos>
-          <DimName>Fiscal Period</DimName>
+          <DimName>Day</DimName>
           <ElemNo></ElemNo>
           <ElemValues></ElemValues>
         </Pos>
@@ -2997,7 +3015,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-3))&lt;=$(=Date($(vDashboardDate)))&quot;} &gt;} $(vLineItemMargin))</v>
+              <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date(GetFieldSelections(OrderDate)),-1))&lt;=$(=Date(GetFieldSelections(OrderDate)))&quot;} &gt;} $(vLineItemSale))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -3035,7 +3053,9 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Current</v>
+              <v>=AddMonths(Date(GetFieldSelections(OrderDate)),-1)
+&amp; ' to ' &amp;
+GetFieldSelections(OrderDate)</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -3484,7 +3504,7 @@
           <InternalId>-1</InternalId>
           <ExpressionData>
             <Definition>
-              <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date($(vDashboardDate)),-15))&lt;=$(=AddMonths(Date($(vDashboardDate)),-12))&quot;} &gt;} $(vLineItemMargin))</v>
+              <v>=Sum({&lt;OrderDate = {&quot;&gt;$(=AddMonths(Date(GetFieldSelections(OrderDate)),-13))&lt;=$(=AddMonths(Date(GetFieldSelections(OrderDate)),-12))&quot;} &gt;} $(vLineItemSale))</v>
             </Definition>
             <Enable>true</Enable>
             <Present>false</Present>
@@ -3522,7 +3542,9 @@
             <BckAsLine>true</BckAsLine>
             <BckAsSymbol>false</BckAsSymbol>
             <Label>
-              <v>Last Year</v>
+              <v>=AddMonths(Date(GetFieldSelections(OrderDate)),-13)
+&amp; ' to ' &amp;
+AddMonths(Date(GetFieldSelections(OrderDate)),-12)</v>
             </Label>
             <BorderWidth>0</BorderWidth>
             <Invisible>false</Invisible>
@@ -3532,10 +3554,10 @@
             <NumAdjust>2</NumAdjust>
             <VerticalAdjust>4</VerticalAdjust>
             <NumberPresentation>
-              <Type>MONEY</Type>
+              <Type>UNKNOWN</Type>
               <nDec>10</nDec>
               <UseThou>0</UseThou>
-              <Fmt>$#,##0.00;($#,##0.00)</Fmt>
+              <Fmt></Fmt>
               <Dec>.</Dec>
               <Thou>,</Thou>
             </NumberPresentation>
@@ -3883,14 +3905,7 @@
             <MiniChartCellSettings></MiniChartCellSettings>
           </ExpressionVisual>
           <AxisData>
-            <Units>
-              <Unit>
-                <v>$</v>
-              </Unit>
-              <kUnit></kUnit>
-              <MUnit></MUnit>
-              <GUnit></GUnit>
-            </Units>
+            <Units></Units>
             <Backcast></Backcast>
             <Forecast></Forecast>
             <Max></Max>

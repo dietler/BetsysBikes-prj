@@ -30,16 +30,9 @@
         </SecondaryCol>
         <Alpha>255</Alpha>
       </Color>
-      <Font>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>8000</PointSize1000>
-        <Underline>false</Underline>
-        <Bold>false</Bold>
-        <Italic>false</Italic>
-        <DropShadow>false</DropShadow>
-      </Font>
+      <Font></Font>
       <CaptionFont>
-        <FontName>Tahoma</FontName>
+        <FontName>Arial</FontName>
         <PointSize1000>10000</PointSize1000>
         <Underline>false</Underline>
         <Bold>true</Bold>
@@ -1483,10 +1476,10 @@
         <v>Sales</v>
       </Title>
       <Font>
-        <FontName>Tahoma</FontName>
-        <PointSize1000>11000</PointSize1000>
+        <FontName>Franklin Gothic Book</FontName>
+        <PointSize1000>12000</PointSize1000>
         <Underline>false</Underline>
-        <Bold>true</Bold>
+        <Bold>false</Bold>
         <Italic>false</Italic>
         <DropShadow>false</DropShadow>
       </Font>

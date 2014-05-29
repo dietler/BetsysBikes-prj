@@ -502,14 +502,20 @@
     <String>Master Calendar</String>
     <String>158</String>
     <String>1</String>
-    <String>Master Calendar-1</String>
+    <String>Master Calendar</String>
     <String>159</String>
     <String>1</String>
-    <String>Shipping Methods</String>
+    <String>Master Calendar</String>
     <String>160</String>
     <String>1</String>
-    <String>Quotas</String>
+    <String>Master Calendar-1</String>
     <String>161</String>
+    <String>1</String>
+    <String>Shipping Methods</String>
+    <String>162</String>
+    <String>1</String>
+    <String>Quotas</String>
+    <String>163</String>
     <String>1</String>
     <String>Quotas</String>
   </FieldSrcTables>
@@ -838,6 +844,8 @@
           <String>AccountNumber</String>
           <String>Vendor Name</String>
           <String>Day And Month</String>
+          <String>Quarter</String>
+          <String>Fiscal Quarter</String>
           <String>Shipping Method Name</String>
           <String>Temp Employee ID</String>
         </FieldNames>
@@ -913,6 +921,8 @@
           <String>AccountNumber</String>
           <String>Vendor Name</String>
           <String>Day And Month</String>
+          <String>Quarter</String>
+          <String>Fiscal Quarter</String>
           <String>Shipping Method Name</String>
           <String>Temp Employee ID</String>
         </FieldNames>
